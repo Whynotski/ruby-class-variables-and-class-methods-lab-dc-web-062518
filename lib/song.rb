@@ -2,12 +2,11 @@ class Song
   @@count=0
   @@genres=[]
   @@artist=[]
-# @@artist_count={}
-# @@genre_count={}
-# @@all=[]
+@@artist_count={}
+@@genre_count={}
+@@all=[]
 
   attr_accessor :name, :genre, :artist
-
   @@count=0
   @@artist=[]
   @@genres=[]
@@ -17,7 +16,7 @@ class Song
     @artist=artist
     @genre=genre
     @@count +=1
-    #@@artist << self
+    @@all << self
   end
 
   def artist
@@ -32,7 +31,7 @@ class Song
     #Total number of songs created
     @count = @count + 1
   end
-
+###################################################
   def self.artists
   @@artist.uniq
   end
